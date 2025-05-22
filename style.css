@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body{
+    font-family: "Bebas Neue", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template : 1fr 4fr / 1fr 4fr;
+    grid-template-areas: 
+    "aside header"
+    "aside main"
+    ;
+
+
+}
+
+
+
+/* layout */
+
+aside{
+    padding: 1rem;
+    grid-area: aside;
+    background-color: #2591d2;
+    color: white;
+}
+
+header{
+    grid-area: header;
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+main{
+    grid-area: main;
+    background-color: #E2E8F0;
+}
+
+/* icon & logo sidebar */
+
+.icon{
+
+    height:1.5rem;
+
+}
+
+.logo{
+    height: 4rem;
+}
+
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+.sidebar-item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px;   
+}
+
+/* header */
+header{
+    display: grid;
+    grid-template-rows: repeat(2,1fr) ;
+}
+
+.search-icon{
+    height: 16px;
+}
+
+.profile-icon{
+    height: 5rem;
+    border-radius: 45%;
+}
+
+
+header > .up{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+header > .up > .left{
+    gap: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+header > .up > .right{
+    gap: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+
+
+header > .up > .left > .search-bar{
+    width: 600px;
+    border: none;
+    padding: 1rem;
+    background-color: #E2E8F0;
+    border-radius: 1rem;
+}
+
+
+header > .up{
+    margin-bottom: 0;
+    padding: 0 2rem;
+    background-color: #FFFFFF;
+}
+header > .down{
+    padding: 0 2rem;
+    background-color: white;
+}
+
+
+/* //down nav */
+.profile-pic{
+    height: 6rem;
+}
+
+header > .down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > .down > .left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile-message{
+    font-size: 1rem;
+}
+.profile-name{
+    font-size: 2rem;
+}
+header > .down > .right > button{
+    width: 80px;
+    padding: 8px;
+    margin-left: 12px;
+    border: none;
+    color: white;
+    background-color: #1992D4;
+    font-weight: bold;
+    border-radius:1rem ;
+}
+
+
+
+/* main */
+main{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 0.7fr;
+}
+
+
+main > section.left {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.project{
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr)) ;
+}
+
+.project-card{
+    border-radius: 16px;
+    height: 200px;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 0.3fr 10fr;
+    background-color: white;
+}
+
+.left-line{
+    background-color: orange;
+}
+.content{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content > .icon{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.content > .icon > p{
+    padding: 0 1rem;
+    background-color: grey;
+}
+
+
+/* left section */
+
+section.right{
+    gap: 1rem;
+    padding: 1rem;
+    display: grid;
+    padding: 1rem;
+    grid-template-rows: repeat(2,1fr);
+}
+.announcement-card , .user-card{
+    border-radius: 16px;
+    background-color: white;
+    padding: 1rem;
+    display: grid;
+    gap: 4px;
+    grid-template-rows: repeat(auto-fit,minmax(50px,1fr));
+}
+
+.proifle-icon{
+    height: 16px;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
